@@ -10,8 +10,8 @@
   show heading.where(level: 1): set text(26pt)
   grid(
     columns: (1fr, auto),
-    row-gutter: (0.6em, 0.6em, 0.6em, 0.6em, 4em),
-    grid.cell(colspan: 2, align: right, image("logo_dc.jpg", width: 200pt)),
+    row-gutter: (5em, 0.6em, 0.6em, 0.6em, 4em),
+    grid.cell(colspan: 2, align: right, image("logo_dc.jpg", width: 220pt)),
     grid.cell(colspan: 2, [
       = #titulo \
       #text(14pt, weight: "bold")[#subtitulo]
@@ -23,8 +23,8 @@
       table(
         columns: (auto, auto, auto),
         stroke: (x, y) => (
-        left: if y == 0 and x == 0 { 0.5pt }  else { 0.5pt },
-        right: if y == 0 and x == 2 { 0.5pt } else { 0.5pt },
+        left: if x == 0 { 0.5pt },
+        right: if x == 2 { 0.5pt },
         top: 0.5pt, 
         bottom: 0.5pt
         ),
@@ -33,12 +33,13 @@
           integrante.nombre,
           integrante.lu, 
           link("mailto:" + integrante.email)
-        )
-      ).flatten(),
+          )
+        ).flatten(),
+      )
     )
-  ))
+  )
   
-  place(bottom + left, image("logo_uba.jpg", width: 300pt))
+  place(bottom + left, image("logo_uba.jpg", width: 230pt))
   pagebreak()
   
   body 

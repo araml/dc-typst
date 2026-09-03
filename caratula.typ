@@ -28,7 +28,15 @@
         top: 0.5pt, 
         bottom: 0.5pt
         ),
+        inset: (x, y) => (
+          if y == 1 { 
+            (top: 0.2em, bottom: 0.1em)
+          } else { 
+            0.5em 
+          }
+        ),
         table.header([Nombre], [LU], [email]),
+        table.cell(colspan: 3, stroke: none)[],
         ..integrantes.map(integrante => (
           integrante.nombre,
           integrante.lu, 
@@ -42,5 +50,8 @@
   place(bottom + left, image("logo_uba.jpg", width: 230pt))
   pagebreak()
   
+  set heading(numbering: "1.")
+  outline()
+
   body 
 }

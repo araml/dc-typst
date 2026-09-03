@@ -11,7 +11,7 @@
   grid(
     columns: (1fr, auto),
     row-gutter: (5em, 0.6em, 0.6em, 0.6em, 4em),
-    grid.cell(colspan: 2, align: right, image("logo_dc.jpg", width: 220pt)),
+    grid.cell(colspan: 2, align: right, image("img/logo-dc.svg", width: 220pt)),
     grid.cell(colspan: 2, [
       = #titulo \
       #text(14pt, weight: "bold")[#subtitulo]
@@ -47,7 +47,7 @@
     )
   )
   
-  place(bottom + left, image("logo_uba.jpg", width: 230pt))
+  place(bottom + left, image("img/logo_uba.jpg", width: 230pt))
   pagebreak()
   
   set heading(numbering: "1.")
